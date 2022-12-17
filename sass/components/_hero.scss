@@ -1,0 +1,37 @@
+.hero {
+    @extend %section;
+    background-color: $parFontColor;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    &__title {
+        @extend %text;
+        margin-bottom: 30px;
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 1.3;
+        text-align: center;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: $white;
+    }
+}
+
+.hero__button {
+    @extend %btn;
+    padding: 10px 24px;
+    &:hover, &:focus, &:active {
+        background-color: $hoverColor;
+    }
+}

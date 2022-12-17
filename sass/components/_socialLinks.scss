@@ -1,0 +1,31 @@
+.social-list {
+    @extend %list;
+    justify-content: center;
+    align-items: center;
+    &__item {
+        margin-right: 10px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__icon {
+        fill: currentColor;
+    }
+}
+
+.social-list__link {
+    &--light {
+        @include SocialLink($iconColor, inherit);
+        &:hover, &:focus {
+            background-color: $styleColor;
+            color: $white;
+        }
+    }
+    &--dark {
+        @include SocialLink($white, rgba(255, 255, 255, 0.1));
+        &:hover, &:focus {
+            background-color: $styleColor;
+            color: $white;
+        }
+    }
+}
